@@ -11,6 +11,12 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
+      path: 'custom',
+      loadChildren: () => import('../custom/custom.module')
+        .then(m => m.CustomModule),
+    },
+
+    {
       path: 'dashboard',
       component: ECommerceComponent,
     },
