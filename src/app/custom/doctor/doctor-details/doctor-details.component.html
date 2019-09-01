@@ -1,3 +1,161 @@
-<p>
-  doctor-details works!
-</p>
+<div class="row">
+  <div class="col-md-3">
+    <div class="profileImage">
+      <img src="/assets/images/alan.png" alt="">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <nb-card>
+      <nb-card-header class="card-header">About</nb-card-header>
+      <nb-card-body>
+        <table class="infoTable">
+          <tr>
+            <td>Name</td>
+            <td>Dr rahmatul Bari</td>
+            <td>Registration ID</td>
+            <td>001211</td>
+          </tr>
+
+          <tr>
+            <td>Email</td>
+            <td>drrahmatulbari@gmail.com</td>
+            <td>phone</td>
+            <td>+880 1521 107320</td>
+          </tr>
+
+          <tr>
+            <td>Speciality</td>
+            <td colspan="3">Something</td>
+          </tr>
+         
+        </table>
+
+      </nb-card-body>
+     
+    </nb-card>
+  </div>
+</div>
+ <br><br>
+<div class="row">
+  <div class="col-md-12">
+      <nb-flip-card [showToggleButton]="false" [flipped]="bioflipped">
+          <nb-card-front>
+            <nb-card accent="info">
+              <nb-card-header class="card-header">
+                Bio
+                <button nbButton size="small" (click)="onEditBio()" status="warning">Edit</button>
+              </nb-card-header>
+              <nb-card-body>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic deserunt debitis labore optio, eum natus harum aliquid aperiam unde asperiores corrupti blanditiis illo voluptatum sequi dignissimos suscipit facilis perspiciatis incidunt omnis doloribus sint tempora quibusdam. Minus quae pariatur animi vero eligendi id, voluptatum eum explicabo non, possimus, ratione error similique.
+              </nb-card-body>
+            </nb-card>
+          </nb-card-front>
+          <nb-card-back>
+            <nb-card accent="danger">
+              <nb-card-header class="card-header">
+                Add Bio
+                <button nbButton size="small" (click)="onSaveBio()" status="info">Save</button>
+              </nb-card-header>
+              <nb-card-body>
+                  <textarea nbInput fullWidth placeholder="Textarea"></textarea>
+              </nb-card-body>
+            </nb-card>
+          </nb-card-back>
+      </nb-flip-card>
+     
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <nb-flip-card [showToggleButton]="false" [flipped]="piflipped">
+          <nb-card-front>
+            <nb-card accent="info">
+              <nb-card-header class="card-header">
+                Professional Information
+                <button nbButton size="small" (click)="onEditProfessionalInfo()" status="warning">Edit</button>
+              </nb-card-header>
+              <nb-card-body>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic deserunt debitis labore optio, eum natus harum aliquid aperiam unde asperiores corrupti blanditiis illo voluptatum sequi dignissimos suscipit facilis perspiciatis incidunt omnis doloribus sint tempora quibusdam. Minus quae pariatur animi vero eligendi id, voluptatum eum explicabo non, possimus, ratione error similique.
+              </nb-card-body>
+            </nb-card>
+          </nb-card-front>
+          <nb-card-back>
+            <nb-card accent="danger">
+              <nb-card-header class="card-header">
+                Add Professional Information
+                <button nbButton size="small" (click)="onSaveProfessionalInfo()" status="info">Save</button>
+              </nb-card-header>
+              <nb-card-body>
+                  <textarea nbInput fullWidth placeholder="Textarea"></textarea>
+              </nb-card-body>
+            </nb-card>
+          </nb-card-back>
+      </nb-flip-card>
+     
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <nb-flip-card [showToggleButton]="false" [flipped]="aiflipped">
+          <nb-card-front>
+            <nb-card accent="info">
+              <nb-card-header class="card-header">
+                  Academic Information
+                <button nbButton size="small" (click)="onEditAcademicInfo()" status="warning">Edit</button>
+              </nb-card-header>
+              <nb-card-body>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic deserunt debitis labore optio, eum natus harum aliquid aperiam unde asperiores corrupti blanditiis illo voluptatum sequi dignissimos suscipit facilis perspiciatis incidunt omnis doloribus sint tempora quibusdam. Minus quae pariatur animi vero eligendi id, voluptatum eum explicabo non, possimus, ratione error similique.
+              </nb-card-body>
+            </nb-card>
+          </nb-card-front>
+          <nb-card-back>
+            <nb-card accent="danger">
+              <nb-card-header class="card-header">
+                Add Academic Information
+                <button nbButton size="small" (click)="onSaveAcademicInfo()" status="info">Save</button>
+              </nb-card-header>
+              <nb-card-body>
+                  <textarea nbInput fullWidth placeholder="Textarea"></textarea>
+              </nb-card-body>
+            </nb-card>
+          </nb-card-back>
+      </nb-flip-card>
+     
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+      <nb-card (click)="open()">
+          <nb-card-header class="card-header">Chembers</nb-card-header>
+          <nb-card-body>
+
+            <div class="row">
+              <div class="col-md-3">
+                  <nb-card>
+                    <nb-card-header >
+                        Chamber 1
+                    </nb-card-header>
+                    <nb-card-body>
+                      <span>Address : </span>
+                      <address>
+                        87/a <br> 
+                        House # 65<br>
+                        Road # 3<br>
+                        Box 564, Disneyland<br>
+                        USA
+                      </address>
+                     
+                    </nb-card-body>
+                  </nb-card>
+              </div>
+            </div>
+         
+    
+          </nb-card-body>
+         
+      </nb-card>
+  </div>
+</div>
+
+

@@ -8,14 +8,14 @@ import { CustomComponent } from './custom.component';
 import { ThemeModule } from '../@theme/theme.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NbCardModule, NbIconModule, NbInputModule, NbButtonModule } from '@nebular/theme';
-import { DoctorDetailsComponent } from './doctor/doctor-details/doctor-details.component';
+import { DoctorDetailsComponent, ChemberDialog } from './doctor/doctor-details/doctor-details.component';
 
 const components = [
   DoctorComponent,
   PatientComponent,
   CustomComponent,
   DoctorDetailsComponent,
-  ButtonRenderComponent
+  ButtonRenderComponent,
 ];
 
 

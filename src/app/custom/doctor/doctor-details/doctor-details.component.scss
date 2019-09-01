@@ -1,0 +1,24 @@
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+
+.profileImage{
+    text-align: center;
+}
+.card-header{
+    font-size: 1.5em;
+    padding: 0.75em;
+    display: flex;
+    justify-content: space-between;
+}
+.infoTable{
+    width: 100%;
+
+    tr{
+        height: 3.4em;
+        border-bottom: 1px solid #e6e5e5;
+        font-size: large;
+    }
+}

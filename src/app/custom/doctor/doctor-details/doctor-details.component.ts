@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NbDialogService } from '@nebular/theme';
 
 @Component({
   selector: 'ngx-doctor-details',
@@ -8,8 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DoctorDetailsComponent implements OnInit {
   doctorID: number;
+  bioflipped: boolean;
+  piflipped: boolean;
+  aiflipped: any;
 
-  constructor(private activatedRoute:ActivatedRoute) { }
+  constructor(private activatedRoute:ActivatedRoute , private dialogService: NbDialogService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
@@ -17,5 +21,46 @@ export class DoctorDetailsComponent implements OnInit {
       console.log(this.doctorID)
   });
   }
+  onEditBio(){
+    this.toggleBioView();
+  }
+  onSaveBio(){
+    this.toggleBioView();
+  }
+  toggleBioView() { 
+    this.bioflipped = !this.bioflipped;
+   }
 
+  onEditProfessionalInfo(){
+    this.togglePIView();
+  }
+  onSaveProfessionalInfo(){
+    this.togglePIView();
+  }
+  togglePIView() { 
+    this.piflipped = !this.piflipped;
+   }
+
+  onEditAcademicInfo(){
+    this.toggleAIView();
+  }
+  onSaveAcademicInfo(){
+    this.toggleAIView();
+  }
+  toggleAIView() { 
+    this.aiflipped = !this.aiflipped;
+   }
+
+   open() {
+    this.dialogService.open(ChemberDialog, {
+      context: {
+        title: 'This is a title passed to the dialog component',
+      },
+    });
+  }
 }
+@Component({
+  selector: 'chember-dialog',
+  templateUrl: 'chember-dialog.html',
+})
+export class ChemberDialog {}
