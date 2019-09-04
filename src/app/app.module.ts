@@ -20,10 +20,9 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
-import { ChemberDialog } from './custom/doctor/doctor-details/doctor-details.component';
 
 @NgModule({
-  declarations: [AppComponent,ChemberDialog],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -43,7 +42,7 @@ import { ChemberDialog } from './custom/doctor/doctor-details/doctor-details.com
     }),
     CoreModule.forRoot(),
   ],
-  entryComponents:[ChemberDialog],
+  entryComponents:[],
   bootstrap: [AppComponent],
   
 })

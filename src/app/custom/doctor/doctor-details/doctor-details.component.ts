@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NbDialogService } from '@nebular/theme';
+import { ChemberComponent } from './chember/chember.component';
 
 @Component({
   selector: 'ngx-doctor-details',
@@ -18,7 +19,7 @@ export class DoctorDetailsComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.doctorID = params['slug'];
-      console.log(this.doctorID)
+      // console.log(this.doctorID)
   });
   }
   onEditBio(){
@@ -52,15 +53,11 @@ export class DoctorDetailsComponent implements OnInit {
    }
 
    open() {
-    this.dialogService.open(ChemberDialog, {
-      context: {
-        title: 'This is a title passed to the dialog component',
-      },
+    const dialogRef = this.dialogService.open(ChemberComponent, {
+      hasBackdrop:false
     });
+
   }
+
 }
-@Component({
-  selector: 'chember-dialog',
-  templateUrl: 'chember-dialog.html',
-})
-export class ChemberDialog {}
+
