@@ -2,6 +2,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { LocalDataSource, ViewCell } from 'ng2-smart-table';
 import { SmartTableData } from '../../@core/data/smart-table';
 import { Router } from '@angular/router';
+import { NewsService } from '../../pages/layout/news.service';
 
 @Component({
   selector: 'ngx-doctor',
@@ -10,9 +11,11 @@ import { Router } from '@angular/router';
 })
 export class DoctorComponent  {
 
+
+
   settings = {
 
- 
+
     columns: {
       id: {
         title: 'Registration Id',
@@ -46,7 +49,7 @@ export class DoctorComponent  {
     },
     hideSubHeader:true,
     actions:false
-    
+
   };
 
   source: LocalDataSource = new LocalDataSource();
@@ -72,18 +75,18 @@ export class DoctorComponent  {
   `,
 })
 export class ButtonRenderComponent implements ViewCell {
- 
+
 
   @Input() value: string | number;
   @Input() rowData: any;
 
   @Output() save: EventEmitter<any> = new EventEmitter();
-  
+
   constructor(private router:Router){
 
   }
 
-  
+
 onClick() {
   this.router.navigate(['pages/custom/doctors/'+this.rowData.id]);
   // alert('id row '+this.rowData.id)

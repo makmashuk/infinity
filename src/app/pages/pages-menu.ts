@@ -13,17 +13,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   link: '/pages/iot-dashboard',
   // },
   {
-    title: 'Doctors',
+    title: 'Infinity',
     icon: 'person-outline',
     link: 'custom/doctors',
     home: true,
   },
-  {
-    title: 'Patient',
-    icon: 'people-outline',
-    link: 'custom/patients',
-  },
-  
+  // {
+  //   title: 'Patient',
+  //   icon: 'people-outline',
+  //   link: 'custom/patients',
+  // },
+
 ];
 
 
